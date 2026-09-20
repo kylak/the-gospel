@@ -34,7 +34,20 @@ function select(tab) {
   });
 }
 
-// Un clic change le hash (les onglets sont des #panel-<ref>), ce qui appelle open().
+// Un clic sur une reference ouvre le verset SANS suivre le lien :
+// le defaut du navigateur ferait defiler la page jusqu'a l'ancre.
+// L'URL est mise a jour a la main (replaceState) pour garder la reference partageable.
+document.querySelectorAll('[role="tablist"]').forEach(function (list) {
+  list.addEventListener('click', function (e) {
+    var tab = e.target.closest ? e.target.closest('[role="tab"]') : null;
+    if (!tab) return;
+    e.preventDefault();
+    select(tab);
+    if (history.replaceState) history.replaceState(null, '', '#' + tab.getAttribute('aria-controls'));
+  });
+});
+
+// Ouverture depuis l'URL (chargement direct ou hash change a la main).
 function open() {
   select(document.querySelector('[role="tab"][aria-controls="' + location.hash.slice(1) + '"]'));
 }
