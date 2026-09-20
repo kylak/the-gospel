@@ -1,0 +1,14 @@
+/* Grille a 2 lignes : ligne 1 = le tablist (place tout seul en 1/1),
+   ligne 2 = les versets, tous empiles dans la MEME cellule.
+   Le <p> prend donc toujours la hauteur du plus long verset du <li> :
+   changer d'onglet ne decale plus le reste de la page.
+   Le 'hidden' du verset masque est remplace par 'visibility' pour qu'il
+   garde sa place (et la marge basse fixe de 1em espace les versets). */
+li > p { margin: 0 0 1em; display: grid; }
+li > p > [role=tabpanel] { grid-area: 2 / 1; }
+li > p > [role=tabpanel][hidden] { display: block; visibility: hidden; }
+
+/* Onglets : on annule l'aspect par defaut d'un lien (bleu + souligne),
+   et on grise ceux qui ne sont pas ouverts (l'onglet actif reste noir). */
+[role=tab] { color: inherit; text-decoration: none; }
+[role=tab]:not([aria-selected=true]) { color: #808080; }
