@@ -25,9 +25,9 @@ document.querySelectorAll('[role="tablist"]').forEach(function (list) {
 });
 
 // 2) Selection : un seul onglet ouvert a la fois dans un <li>.
-function select(tab) {
-  if (!tab) return;
-  tab.parentNode.querySelectorAll('[role="tab"]').forEach(function (t) {
+// tab = null ferme tous les onglets du groupe (aucun panneau affiche).
+function select(list, tab) {
+  list.querySelectorAll('[role="tab"]').forEach(function (t) {
     t.setAttribute('aria-selected', t === tab);
     var panel = document.getElementById(t.getAttribute('aria-controls'));
     if (panel) panel.hidden = t !== tab;
@@ -42,19 +42,21 @@ document.querySelectorAll('[role="tablist"]').forEach(function (list) {
     var tab = e.target.closest ? e.target.closest('[role="tab"]') : null;
     if (!tab) return;
     e.preventDefault();
-    select(tab);
+    select(list, tab);
     if (history.replaceState) history.replaceState(null, '', '#' + tab.getAttribute('aria-controls'));
   });
 });
 
 // Ouverture depuis l'URL (chargement direct ou hash change a la main).
 function open() {
-  select(document.querySelector('[role="tab"][aria-controls="' + location.hash.slice(1) + '"]'));
+  var tab = document.querySelector('[role="tab"][aria-controls="' + location.hash.slice(1) + '"]');
+  if (tab) select(tab.parentNode, tab);
 }
 
-// Au chargement : 1er onglet de chaque <li>, puis l'ancre de l'URL si elle vise un verset.
+// Au chargement : l'onglet portant l'attribut "default" de chaque <li>
+// (aucun s'il n'y en a pas), puis l'ancre de l'URL si elle vise un verset.
 document.querySelectorAll('[role="tablist"]').forEach(function (list) {
-  select(list.querySelector('[role="tab"]'));
+  select(list, list.querySelector('[role="tab"][default]'));
 });
 open();
 
