@@ -1,12 +1,27 @@
 /* Grille a 2 lignes : ligne 1 = le tablist (place tout seul en 1/1),
    ligne 2 = les versets, tous empiles dans la MEME cellule.
-   Le <p> prend donc toujours la hauteur du plus long verset du <li> :
+   Le conteneur prend donc toujours la hauteur du plus long verset du <li> :
    changer d'onglet ne decale plus le reste de la page.
    Le 'hidden' du verset masque est remplace par 'visibility' pour qu'il
-   garde sa place (et la marge basse fixe de 1em espace les versets). */
-li > p { margin: 0 0 1em; display: grid; }
-li > p > [role=tabpanel] { grid-area: 2 / 1; }
-li > p > [role=tabpanel][hidden] { display: block; visibility: hidden; }
+   garde sa place (et la marge basse fixe de 1em espace les versets).
+   C'est un <div> et non un <p> : un <details> (le commentaire, un par
+   panneau) fermerait le <p> et sortirait de son onglet. */
+li > div { margin: 0 0 1em; display: grid; }
+li > div > [role=tabpanel] { grid-area: 2 / 1; }
+li > div > [role=tabpanel][hidden] { display: block; visibility: hidden; }
+
+/* Le libelle du commentaire est en italique. */
+summary { font-style: italic; }
+
+/* Un commentaire REPLIE ne doit occuper aucune place dans la page :
+   seule reste la ligne "commentaire". */
+details:not([open]) > :not(summary) { display: none; }
+details:not([open])::details-content { content-visibility: hidden; }
+
+/* Dans un onglet masque, le commentaire (ligne "commentaire" comprise)
+   ne compte pas du tout : son panneau garde sa place dans la grille,
+   donc seul son verset doit peser sur la hauteur du <li>. */
+[role=tabpanel][hidden] details { display: none; }
 
 /* Onglets : on annule l'aspect par defaut d'un lien (bleu + souligne),
    et on grise ceux qui ne sont pas ouverts (l'onglet actif reste noir). */
