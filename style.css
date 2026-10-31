@@ -29,3 +29,4 @@ details:not([open])::details-content { content-visibility: hidden; }
 [role=tab]:not([aria-selected=true]) { color: #808080; }
 
 .underline-details { text-decoration: underline;}
+
