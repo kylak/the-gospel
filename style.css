@@ -16,7 +16,6 @@ li > div > [role=tabpanel] { grid-area: 2 / 1; }
    reduits entre ses points et un petit espace apres le dernier. */
 .degrade-1, .degrade-2, .degrade-3, .degrade-4, .degrade-5 {
   margin-bottom: 0;
-  box-shadow: inset 4px 0 0 #9c5f14;
   background: var(--fond);
 }
 .degrade-1 { --fond: #fdf2d8; margin-bottom: .4em; }
@@ -24,8 +23,7 @@ li > div > [role=tabpanel] { grid-area: 2 / 1; }
 .degrade-3 { --fond: #f5dca2; }
 .degrade-4 { --fond: #f1d187; }
 .degrade-5 { --fond: #edc66c; margin-bottom: .4em; }
-.groupe-3 { background: #e7f0fc; box-shadow: inset 4px 0 0 #4a7fc1;
-  margin-bottom: .4em; }
+.groupe-3 { background: #e7f0fc; margin-bottom: .4em; }
 
 /* Petit espace apres le point 9, avant le point 10. */
 .espace-court { margin-bottom: .4em; }
