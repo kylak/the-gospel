@@ -9,22 +9,23 @@ li > div > [role=tabpanel] { grid-area: 2 / 1; }
 
 /* Trois blocs de couleur. Le premier (points 1 et 2) est orange et ses
    points se touchent ; un petit espace le separe du deuxieme.
-   Le deuxieme (points 3 a 7) decline le jaune du plus clair au plus
-   soutenu (degrade-1 a 5) : les points 3 a 5 sont separes par un petit
-   espace, les points 5 a 7 se touchent, et la fin du bloc laisse un petit
+   Le deuxieme (points 3 a 8) decline le jaune du plus clair au plus
+   soutenu (degrade-1 a 6) : les points 3 a 5 sont separes par un petit
+   espace, les points 5 a 8 se touchent, et la fin du bloc laisse un petit
    espace avant le point suivant.
-   Le troisieme (points 8 a 10) est vert, avec des ecarts reduits entre ses
+   Le troisieme (points 9 a 11) est vert, avec des ecarts reduits entre ses
    points et un petit espace apres le dernier. */
 .groupe-1 { background: #fad0a1; margin-bottom: 0; }
-.degrade-1, .degrade-2, .degrade-3, .degrade-4, .degrade-5 {
+.degrade-1, .degrade-2, .degrade-3, .degrade-4, .degrade-5, .degrade-6 {
   margin-bottom: 0;
   background: var(--fond);
 }
 .degrade-1 { --fond: #fff9cf; margin-bottom: .4em; }
 .degrade-2 { --fond: #fdf3b0; margin-bottom: .4em; }
 .degrade-3 { --fond: #fbec8a; }
-.degrade-4 { --fond: #f8e25f; }
-.degrade-5 { --fond: #f4d63c; margin-bottom: .4em; }
+.degrade-4 { --fond: #f9e774; }
+.degrade-5 { --fond: #f8e25f; }
+.degrade-6 { --fond: #f4d63c; margin-bottom: .4em; }
 .groupe-3 { background: #d7edcf; margin-bottom: .4em; }
 
 /* Petit espace apres un point, avant le suivant. */
