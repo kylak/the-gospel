@@ -4,8 +4,19 @@
    les autres onglets (changer d'onglet peut decaler le contenu plus bas).
    C'est un <div> et non un <p> : un <details> (le commentaire, un par
    panneau) fermerait le <p> et sortirait de son onglet. */
-li > div { margin: 0 0 1em; display: grid; }
+li > div { margin: 0 0 1em; padding: .5em .75em .5em 1em; display: grid;
+  border-radius: .4em; }
 li > div > [role=tabpanel] { grid-area: 2 / 1; }
+
+/* Regroupement visuel des points par un fond pastel et un filet de couleur
+   a gauche (couleurs de l'arc en ciel) :
+   - groupe-1 : points 2 et 3 (le peche)
+   - groupe-2 : points 4, 5 et 6 (la mort et le jugement)
+   - groupe-3 : points 7, 8 et 9 (la vie eternelle)
+   Le padding commun a tous les points garde le texte aligne. */
+.groupe-1 { background: #fdf2d8; box-shadow: inset 4px 0 0 #dfa32e; }
+.groupe-2 { background: #e6f5e8; box-shadow: inset 4px 0 0 #4c9a58; }
+.groupe-3 { background: #e7f0fc; box-shadow: inset 4px 0 0 #4a7fc1; }
 
 /* Le libelle du commentaire est en italique. */
 summary { font-style: italic; }
