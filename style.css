@@ -8,13 +8,13 @@ li > div { margin: 0 0 1em; padding: .5em .75em .5em 1em; display: grid;
   border-radius: .4em; }
 li > div > [role=tabpanel] { grid-area: 2 / 1; }
 
-/* Un seul bloc pour les points 2 a 6 : chaque point est une variante de la
+/* Un seul bloc pour les points 1 a 5 : chaque point est une variante de la
    meme famille ambre, du plus clair au plus soutenu (degrade-1 a 5), pour
    que la lecture suive l'ordre croissant. Les fonds se touchent, sauf un
-   petit espace entre les points 2 et 3, et entre les points 3 et 4. Les
+   petit espace entre les points 1 et 2, et entre les points 2 et 3. Les
    coins arrondis marquent ces pauses, et la fin du bloc rend la marge de
    1em au point suivant.
-   Le groupe-3 (points 7 a 9) reste un bloc bleu distinct, avec des ecarts
+   Le groupe-3 (points 6 a 8) reste un bloc bleu distinct, avec des ecarts
    reduits entre ses points et une marge normale apres le dernier. */
 .degrade-1, .degrade-2, .degrade-3, .degrade-4, .degrade-5 {
   margin-bottom: 0;
