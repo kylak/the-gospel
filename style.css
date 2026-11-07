@@ -8,11 +8,11 @@ li > div { margin: 0 0 1em; padding: .5em .75em .5em 1em; display: grid;
   border-radius: .4em; }
 li > div > [role=tabpanel] { grid-area: 2 / 1; }
 
-/* Un seul bloc continu pour les points 2 a 6 : chaque point est une variante
-   de la meme famille ambre, du plus clair au plus soutenu (degrade-1 a 5),
-   pour que la lecture suive l'ordre croissant. Les fonds se touchent :
-   seuls le premier et le dernier sont arrondis, et seule la fin du bloc
-   rend la marge de 1em au point suivant.
+/* Un seul bloc pour les points 2 a 6 : chaque point est une variante de la
+   meme famille ambre, du plus clair au plus soutenu (degrade-1 a 5), pour
+   que la lecture suive l'ordre croissant. Les fonds se touchent, sauf un
+   petit espace entre les points 3 et 4. Les coins arrondis marquent les
+   extremites, et la fin du bloc rend la marge de 1em au point suivant.
    Le groupe-3 (points 7 a 9) reste un bloc bleu distinct. */
 .degrade-1, .degrade-2, .degrade-3, .degrade-4, .degrade-5 {
   margin-bottom: 0;
@@ -21,8 +21,9 @@ li > div > [role=tabpanel] { grid-area: 2 / 1; }
   background: var(--fond);
 }
 .degrade-1 { --fond: #fdf2d8; border-radius: .4em .4em 0 0; }
-.degrade-2 { --fond: #f9e7bd; }
-.degrade-3 { --fond: #f5dca2; }
+.degrade-2 { --fond: #f9e7bd; border-radius: 0 0 .4em .4em;
+  margin-bottom: .4em; }
+.degrade-3 { --fond: #f5dca2; border-radius: .4em .4em 0 0; }
 .degrade-4 { --fond: #f1d187; }
 .degrade-5 { --fond: #edc66c; border-radius: 0 0 .4em .4em;
   margin-bottom: 1em; }
