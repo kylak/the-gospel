@@ -1,19 +1,7 @@
-# Instructions pour les agents
+# Instructions projet — the-gospel
 
-## Commits
-
-- **Commiter systématiquement** après chaque ensemble de modifications cohérent,
-  sans attendre que l'utilisateur le demande.
-- Un commit par changement logique : ne pas mélanger des sujets sans rapport.
-- Message en français, à l'impératif, avec un corps qui liste les points modifiés.
-- Ne commiter que les fichiers concernés par la tâche : ne jamais inclure un
-  travail en cours qui ne vient pas de l'agent.
-- Ne pas utiliser `git commit --amend` ni réécrire l'historique, sauf demande
-  explicite.
-- Si le dépôt contient des modifications non liées, ou si un fichier semble être
-  du travail utilisateur, demander avant de commiter.
-- Vérifier le résultat (structure HTML, rendu, tests disponibles) avant de
-  commiter.
+Les conventions communes (dont le commit systématique) sont définies dans
+`../AGENTS.md`, à la racine de `~/projets`.
 
 ## Projet
 
@@ -26,3 +14,5 @@ Page unique (`index.html`, `script.js`, `style.css`) qui présente des versets.
 - Un seul `default` par `<li>` ; sans `default`, aucun onglet n'est ouvert.
 - Les commentaires de fond vont dans un `<details><summary>` à l'intérieur du
   panneau (replié par défaut).
+- Les renvois internes du type « cf. le point N » doivent être mis à jour à
+  chaque insertion ou suppression de point.
