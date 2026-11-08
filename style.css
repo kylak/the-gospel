@@ -15,7 +15,8 @@ li > div > [role=tabpanel] { grid-area: 2 / 1; }
    espace avant le point suivant.
    Le troisieme (points 8 a 10) est vert : les points 8 et 9 forment un
    degrade (degrade-vert-1 et 2), et le point 10 garde la teinte verte.
-   Le quatrieme (points 11 a 14) est bleu.
+   Le quatrieme (points 11 a 14) decline le bleu du plus clair au plus
+   soutenu (degrade-bleu-1 a 4).
    Les points de ces deux derniers blocs sont separes par un petit espace. */
 .groupe-1 { background: #fad0a1; margin-bottom: 0; }
 .degrade-1, .degrade-2, .degrade-3, .degrade-4, .degrade-5 {
@@ -30,7 +31,10 @@ li > div > [role=tabpanel] { grid-area: 2 / 1; }
 .degrade-vert-1 { background: #e8f6e2; margin-bottom: .4em; }
 .degrade-vert-2 { background: #d7edcf; margin-bottom: .4em; }
 .groupe-3 { background: #d7edcf; margin-bottom: .4em; }
-.groupe-bleu { background: #d9e8fb; margin-bottom: .4em; }
+.degrade-bleu-1 { background: #dcebfc; margin-bottom: .4em; }
+.degrade-bleu-2 { background: #cfe2fa; margin-bottom: .4em; }
+.degrade-bleu-3 { background: #c1d8f7; margin-bottom: .4em; }
+.degrade-bleu-4 { background: #b3cff4; margin-bottom: .4em; }
 
 /* Petit espace apres un point, avant le suivant. */
 .espace-court { margin-bottom: .4em; }
