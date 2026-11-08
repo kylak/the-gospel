@@ -7,12 +7,13 @@
 li > div { margin: 0 0 1em; padding: .5em .75em .5em 1em; display: grid; }
 li > div > [role=tabpanel] { grid-area: 2 / 1; }
 
-/* Un seul arc-en-ciel continu : chaque point reprend une teinte de la
-   gamme, de l'orange (point 1) au bleu-violet (point 14). La saturation
-   et la luminosite restent constantes pour que le passage d'un point a
-   l'autre soit doux.
-   Les points 1 et 2 se touchent, ainsi que les points 5 a 7 ; les autres
+/* Un seul arc-en-ciel continu : le point d'introduction est dans un corail
+   clair, puis chaque point reprend une teinte de la gamme, de l'orange
+   (point 2) au bleu-violet (point 15). La saturation et la luminosite
+   restent constantes pour que le passage d'un point a l'autre soit doux.
+   Les points 2 et 3 se touchent, ainsi que les points 6 a 8 ; les autres
    sont separes par un petit espace. */
+.groupe-0 { background: #f4c0af; margin-bottom: .4em; }
 .groupe-1 { background: #f4cfaf; margin-bottom: 0; }
 .groupe-1-clair { background: #f4daaf; }
 .degrade-1, .degrade-2, .degrade-3, .degrade-4, .degrade-5 {
