@@ -7,35 +7,30 @@
 li > div { margin: 0 0 1em; padding: .5em .75em .5em 1em; display: grid; }
 li > div > [role=tabpanel] { grid-area: 2 / 1; }
 
-/* Quatre blocs de couleur. Le premier (points 1 et 2) est orange et ses
-   points se touchent ; un petit espace le separe du deuxieme.
-   Le deuxieme (points 3 a 7) decline le jaune du plus clair au plus
-   soutenu (degrade-1 a 5) : les points 3 a 5 sont separes par un petit
-   espace, les points 5 a 7 se touchent, et la fin du bloc laisse un petit
-   espace avant le point suivant.
-   Le troisieme (points 8 a 10) est vert : les points 8 et 9 forment un
-   degrade (degrade-vert-1 et 2), et le point 10 prend la teinte cyan qui
-   se situe entre le vert et le bleu.
-   Le quatrieme (points 11 a 14) decline le bleu du plus clair au plus
-   soutenu (degrade-bleu-1 a 4).
-   Les points de ces deux derniers blocs sont separes par un petit espace. */
-.groupe-1 { background: #fad0a1; margin-bottom: 0; }
+/* Un seul arc-en-ciel continu : chaque point reprend une teinte de la
+   gamme, de l'orange (point 1) au bleu-violet (point 14). La saturation
+   et la luminosite restent constantes pour que le passage d'un point a
+   l'autre soit doux.
+   Les points 1 et 2 se touchent, ainsi que les points 5 a 7 ; les autres
+   sont separes par un petit espace. */
+.groupe-1 { background: #f4cfaf; margin-bottom: 0; }
+.groupe-1-clair { background: #f4daaf; }
 .degrade-1, .degrade-2, .degrade-3, .degrade-4, .degrade-5 {
   margin-bottom: 0;
   background: var(--fond);
 }
-.degrade-1 { --fond: #fff9cf; margin-bottom: .4em; }
-.degrade-2 { --fond: #fdf3b0; margin-bottom: .4em; }
-.degrade-3 { --fond: #fbec8a; }
-.degrade-4 { --fond: #f8e25f; }
-.degrade-5 { --fond: #f4d63c; margin-bottom: .4em; }
-.degrade-vert-1 { background: #e8f6e2; margin-bottom: .4em; }
-.degrade-vert-2 { background: #d7edcf; margin-bottom: .4em; }
-.groupe-cyan { background: #c9eae5; margin-bottom: .4em; }
-.degrade-bleu-1 { background: #dcebfc; margin-bottom: .4em; }
-.degrade-bleu-2 { background: #cfe2fa; margin-bottom: .4em; }
-.degrade-bleu-3 { background: #c1d8f7; margin-bottom: .4em; }
-.degrade-bleu-4 { background: #b3cff4; margin-bottom: .4em; }
+.degrade-1 { --fond: #f4e6af; margin-bottom: .4em; }
+.degrade-2 { --fond: #f4efaf; margin-bottom: .4em; }
+.degrade-3 { --fond: #eff4af; }
+.degrade-4 { --fond: #e6f4af; }
+.degrade-5 { --fond: #ddf4af; margin-bottom: .4em; }
+.degrade-vert-1 { background: #c6f4af; margin-bottom: .4em; }
+.degrade-vert-2 { background: #aff4b4; margin-bottom: .4em; }
+.groupe-cyan { background: #aff4e2; margin-bottom: .4em; }
+.degrade-bleu-1 { background: #afeef4; margin-bottom: .4em; }
+.degrade-bleu-2 { background: #afddf4; margin-bottom: .4em; }
+.degrade-bleu-3 { background: #afcbf4; margin-bottom: .4em; }
+.degrade-bleu-4 { background: #afbaf4; margin-bottom: .4em; }
 
 /* Petit espace apres un point, avant le suivant. */
 .espace-court { margin-bottom: .4em; }
