@@ -11,11 +11,11 @@ li > div > [role=tabpanel] { grid-area: 2 / 1; }
    clair, puis chaque point reprend une teinte de la gamme, de l'orange
    (point 2) au bleu-violet (point 16). La saturation et la luminosite
    restent constantes pour que le passage d'un point a l'autre soit doux.
-   Les points 2 et 3 se touchent, ainsi que les points 7 a 9 ; les autres
+   Les points 2 a 4 se touchent, ainsi que les points 7 a 9 ; les autres
    sont separes par un petit espace. */
 .groupe-0 { background: #f4c0af; margin-bottom: .4em; }
 .groupe-1 { background: #f4cfaf; margin-bottom: 0; }
-.groupe-1-clair { background: #f4daaf; }
+.groupe-1-clair { background: #f4daaf; margin-bottom: 0; }
 .degrade-1, .degrade-2, .degrade-3, .degrade-4, .degrade-5 {
   margin-bottom: 0;
   background: var(--fond);
