@@ -53,11 +53,26 @@ function open() {
   if (tab) select(tab.parentNode, tab);
 }
 
+// Ouvre le <details> ciblé par l'URL (par exemple un commentaire).
+function openDetails() {
+  var target = document.getElementById(location.hash.slice(1));
+  if (!target) return;
+  var details = target.closest ? target.closest('details') : null;
+  if (details && !details.open) {
+    details.open = true;
+    if (details.scrollIntoView) details.scrollIntoView();
+  }
+}
+
 // Au chargement : l'onglet portant l'attribut "default" de chaque <li>
 // (aucun s'il n'y en a pas), puis l'ancre de l'URL si elle vise un verset.
 document.querySelectorAll('[role="tablist"]').forEach(function (list) {
   select(list, list.querySelector('[role="tab"][default]'));
 });
 open();
+openDetails();
 
-addEventListener('hashchange', open);
+addEventListener('hashchange', function () {
+  open();
+  openDetails();
+});
