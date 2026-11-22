@@ -9,9 +9,9 @@ li > div > [role=tabpanel] { grid-area: 2 / 1; }
 
 /* Un seul arc-en-ciel continu : le point d'introduction est dans un corail
    clair, puis chaque point reprend une teinte de la gamme, de l'orange
-   (point 2) au bleu-violet (point 21). La saturation et la luminosite
+   (point 2) au bleu-violet (point 22). La saturation et la luminosite
    restent constantes pour que le passage d'un point a l'autre soit doux.
-   Les points 2 a 5, 8 a 10, 11 et 12, et 13 a 19 se touchent ; les autres
+   Les points 2 a 5, 8 a 10, 11 et 12, et 13 a 20 se touchent ; les autres
    sont separes par un petit espace. */
 .groupe-0 { background: #f4c0af; margin-bottom: .4em; }
 .groupe-1 { background: #f4cfaf; margin-bottom: 0; }
@@ -39,7 +39,8 @@ li > div > [role=tabpanel] { grid-area: 2 / 1; }
 .groupe-cyan { background: #aff4e2; margin-bottom: 0; }
 .degrade-bleu-1 { background: #afeef4; margin-bottom: 0; }
 .degrade-bleu-2 { background: #afddf4; margin-bottom: 0; }
-.degrade-bleu-2b { background: #afd4f4; margin-bottom: .4em; }
+.degrade-bleu-2b { background: #afd4f4; margin-bottom: 0; }
+.degrade-bleu-2c { background: #afcff4; margin-bottom: .4em; }
 .degrade-bleu-3 { background: #afcbf4; margin-bottom: .4em; }
 .degrade-bleu-4 { background: #afbaf4; margin-bottom: .4em; }
 
